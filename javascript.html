@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: ;
+        }
+        
+        #myform {
+            text-align: center;
+        }
+        
+        #myform p input {
+            font-size: 20px;
+            padding: 10px;
+            border: 1px sloid black;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        
+        #noidung {
+            background: blue;
+            height: 250px;
+            width: 90%;
+            color: yellow;
+            font-size: 25px;
+            margin: 0 auto;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .cang1 {
+            text-align: center;
+        }
+        
+        button {
+            border-radius: 20px;
+            font-size: 20px;
+            padding: 10px;
+            background: red;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bài tập JavaScript</h1>
+    <form id="myform">
+        <p>
+            <input id="textbox1" name="textname" type="text" placeholder="Vui lòng nhập tên" />
+        </p>
+        <p>
+            <input id="textbox2" name="n" type="text" placeholder="nhập n" />
+        </p>
+    </form>
+    <p id="noidung"></p>
+    <div class="cang1">
+        <button type="button" onclick="hienthi()">Hiển thị</button>
+        <button type="button" onclick="tinhtong()">Tính tổng</button>
+        <button type="button" onclick="tinhtongchan()">Tính tổng chẳn</button>
+    </div>
+    <script>
+        function hienthi() {
+            // Giới thiệu tên
+            document.getElementById("noidung").innerHTML =
+                "Xin chao. Toi là " + document.forms["myform"].textname.value;
+        }
+
+        function tinhtong() {
+            //Tính tổng từ 1 -> n
+            var a = document.getElementById('soa').value;
+            var b = document.getElementById('sob').value;
+            var arr=array
+            document.getElementById("noidung").innerHTML =
+                "Tổng từ 1 đến " + document.forms["myform"].n.value + " là: ";
+        }
+
+        function tinhtongchan() {
+            //Tính tổng các số chẳn từ 1 -> n
+            document.getElementById("noidung").innerHTML =
+                "Tổng các số chẵn từ 1 đến " +
+                document.forms["myform"].n.value +
+                " là: ";
+        }
+    </script>
+</body>
+
+</html>
