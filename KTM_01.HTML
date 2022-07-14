@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>bangtinhtoanhonhop</title>
+<script type="text/javascript">
+
+
+form.sohang1.focus();
+var sohang1,sohang2,num1,num2;
+function tinhtong(form)
+{ 
+ if ((form.sohang1.value=="") || (form.sohang2.value=="")|| (isNaN(form.sohang1.value)) ||(isNaN(form.sohang2.value)) )
+ { 
+ 
+ alert("Ban chua nhap hoac da nhap sai!");
+ form.sohang1.focus();
+ 
+ }
+ else 
+ { 
+ num1=parseFloat(form.sohang1.value);
+ num2=parseFloat(form.sohang2.value);
+ form.hopketqua.value=num1+num2;
+ }
+}
+function tinhtru(form)
+{
+ if ((form.sohang1.value=="") || (form.sohang2.value=="") || (isNaN(form.sohang1.value)) ||(isNaN(form.sohang2.value)) )
+ {
+ alert("Ban chua nhap hoac da nhap sai!");
+ form.sohang1.focus();
+ }
+ else
+ 
+ { num1=parseFloat (form.sohang1.value);
+ num2=parseFloat (form.sohang2.value);
+ form.hopketqua.value=num1 - num2;
+ }
+ 
+ 
+}
+function tinhnhan(form)
+{
+ if ((form.sohang1.value=="") || (form.sohang2.value=="") || (isNaN(form.sohang1.value)) ||(isNaN(form.sohang2.value)) )
+ {
+ alert("Ban chua nhap hoac da nhap sai!");
+ form.sohang1.focus();
+ }
+ else
+ {
+ 
+ num1=parseFloat (form.sohang1.value);
+ num2=parseFloat (form.sohang2.value);
+ form.hopketqua.value=num1 * num2;
+ }
+ 
+ 
+}
+function tinhchia(form)
+{
+ if ( (form.sohang1.value=="") || (form.sohang2.value=="") ||(form.sohang2.value==0) || (isNaN(form.sohang1.value)) ||(isNaN(form.sohang2.value)) ) 
+ { 
+ alert("Ban chua nhap cac so hang hop le!");
+ 
+ form.sohang2.focus();
+ }
+ else
+ {
+ 
+ 
+ num1=parseFloat (form.sohang1.value);
+ num2=parseFloat (form.sohang2.value);
+ form.hopketqua.value=num1 / num2;
+ } 
+ 
+ 
+}
+
+
+
+</script>
+
+<style type="text/css">
+<!--
+
+
+.style1 {
+ font-size: 24px;
+ font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<form  
+name="form1" method="post" action="">
+  <table align="left" width="61%"  border="1" bgcolor="#FF6600">
+    <caption>
+    <span class="style1">    Bang tinh toan tong hop    </span>
+    </caption>
+    <tr>
+      <td width="41%">Nhập số thứ 1: </td>
+      <td width="59%"><input name="sohang1" type="text" value="" ></td>
+    </tr>
+    <tr>
+      <td height="29">Nhập số thứ 2: </td>
+      <td width="59%"><input type="text" name="sohang2" value="" maxlength="40" size="20" >&nbsp;</td>
+    </tr>
+    <tr>
+      
+    </tr>
+    <tr>
+      <td>Phép tính </td>
+      <td><input name="phepcong" type="button" value="+" onClick="tinhtong(this.form)">
+   <input name="pheptru" type="button" value="-" onClick="tinhtru(this.form)">
+   <input name="phepnhan" type="button" value="*" onClick="tinhnhan(this.form)">
+   <input name="phepchia" type="button" value="/" onClick="tinhchia(this.form)">
+    <input name="xoa" type="reset" value="Hủy">
+    
+    
+   </td>
+    </tr>
+  </table>
+  <table align="right" border="1" bgcolor="#FF6600" >
+    <td height="150">Ket qua: </td>
+      <td><input type="text" name="hopketqua" value="" maxlength="100" size="20" height="100"  readonly="true" >;</td>
+   </table>
+</form>
+
+
+</body>
+</html>
